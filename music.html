@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Specifies the character encoding for the HTML document -->
+    <meta charset="UTF-8" />
+    <!-- Makes the webpage responsive on all devices by setting the viewport width to match the screen size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the web page displayed in the browser tab -->
+    <title>Music Player App</title>
+
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Favicon Link for the Music Header -->
+     <link rel="shortcut icon" href="/cover.jpeg" type="image/*">
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body >
+    <main>
+      <!-- Container for the search form -->
+      <div  class="search-container">
+        <form id="search-form">
+          <!-- Input field for searching songs -->
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search for songs..."
+          />
+          <!-- Submit button for the search form -->
+          <button type="submit">Search</button>
+        </form>
+      </div>
+
+      <!-- Section displaying the list of songs -->
+      <div class="song-list">
+        <!-- Header row for song list columns -->
+        <div class="songs-row">
+          <p></p> <!-- Placeholder for icons -->
+          <p>Artist Name</p> <!-- Column header for artist names -->
+          <p>Title</p> <!-- Column header for song titles -->
+          <p>Actions</p> <!-- Placeholder for additional actions -->
+        </div>
+        <!-- Row containing individual song details -->
+        <div class="songs-list-row">
+          <li class="song-item">
+            <!-- Button to play/pause the song -->
+            <button class="control-btn play-btn">
+              <i class="fa fa-pause-circle-o" aria-hidden="true"></i>
+            </button>
+            <p>John</p> <!-- Artist name -->
+            <p>pop</p> <!-- Song genre -->
+            <p>04:00</p> <!-- Song duration -->
+            <div class="songs-action">
+              <!-- Button to add the song to a playlist -->
+              <button class="control-btn add-to-playlist">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+              </button>
+              <!-- Button to download the song -->
+              <button class="control-btn download">
+                <i class="fa fa-download" aria-hidden="true"></i>
+              </button>
+            </div>
+          </li>
+        </div>
+      </div>
+
+      <!-- Section containing the main music player -->
+      <div class="music-main">
+        <div class="music-player">
+          <!-- Progress bar to show the current position of the song -->
+          <div class="progress-container">
+            <span id="current-time">0:00</span> <!-- Current playback time -->
+            <input type="range" id="progress-bar" value="0" min="0" max="100" />
+            <span id="total-time">0:00</span> <!-- Total duration of the song -->
+          </div>
+          <div class="current-song-area">
+            <!-- Area displaying information about the currently playing song -->
+            <div class="song-info">
+              <!-- Song cover image -->
+              <img
+                src="/cover.jpeg"
+                alt="Song Cover"
+                class="cover"
+                id="current-cover"
+              />
+              <div class="song-details">
+                <h3 class="song-title" id="current-title">Song Title</h3>
+                <p class="artist-name" id="current-artist">Artist Name</p>
+              </div>
+            </div>
+
+            <!-- Controls for playing the music -->
+            <div class="controls">
+              <!-- Button to play the previous song -->
+              <button class="control-btn play-previous">
+                <i class="fa fa-step-backward" aria-hidden="true"></i>
+              </button>
+              <!-- Button to play or pause the current song -->
+              <button class="control-btn play-pause">
+                <i class="fa fa-play" aria-hidden="true"></i>
+              </button>
+              <!-- Button to play the next song -->
+              <button class="control-btn play-next">
+                <i class="fa fa-step-forward" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <!-- Volume control section -->
+            <div class="volume-container">
+              <!-- Button to toggle repeat mode -->
+              <button class="control-btn repeat">
+                <i class="fa fa-repeat" aria-hidden="true"></i>
+              </button>
+              <!-- Volume label and slider to adjust the volume -->
+              <label for="volume">
+                <i class="fa fa-volume-up" aria-hidden="true"></i>
+              </label>
+              <input
+                type="range"
+                id="volume"
+                min="0"
+                max="1"
+                step="0.1"
+                value="1"
+              />
+              <!-- Button to like the song -->
+              <button class="control-btn like">
+                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Link to the external JavaScript file for functionality -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+/* Reset default margin, padding, and box-sizing for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling for the body element */
+body {
+  font-family: Poppins,Arial, sans-serif; /* Font style for the page */
+  background: linear-gradient(to right, #4442b3, #3d3331); /* Gradient background */
+  height: 100vh; /* Full viewport height */
+}
+
+/* Styling for the main container */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items */
+}
+
+/* Music player container styling */
+.music-main {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the music player */
+  gap: 30px; /* Spacing between elements */
+  padding-bottom: 220px; /* Space at the bottom */
+}
+
+/* Music player box styling */
+.music-player {
+  background-color: #d6adad; /* White background for the player */
+  padding: 20px;
+  padding-bottom: 0px;
+  border-radius: 0px; /* Square corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  width: 100%; /* Full width */
+  text-align: center; /* Center text alignment */
+  position: fixed; /* Fix player to the bottom */
+  bottom: 0%; /* Align with the bottom of the viewport */
+}
+
+/* Current song display area */
+.current-song-area {
+  display: flex;
+  justify-content: space-between; /* Space out elements */
+  align-items: center;
+}
+
+/* Song information layout */
+.song-info {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Spacing between elements */
+  margin-bottom: 20px; /* Space below */
+}
+
+/* Layout for each song item */
+.song-item {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 1.5fr 1fr; /* Define grid columns */
+  align-items: center;
+  gap: 30px; /* Spacing between columns */
+  padding: 12px; /* Padding inside each song item */
+}
+
+/* Header row for the song list */
+.songs-row {
+  background-color: #f6d365; /* Orange background */
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 1.5fr 1fr; /* Grid layout */
+  align-items: center;
+  gap: 30px; /* Space between columns */
+  border-bottom-left-radius: 20px; /* Rounded corners */
+  border-bottom-right-radius: 20px;
+}
+
+/* Song action buttons layout */
+.songs-action {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Spacing between buttons */
+  justify-self: center;
+}
+
+/* Song cover image styling */
+.cover {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Circle shape */
+}
+
+/* Styling for liked and disliked buttons */
+.control-btn.liked {
+  color: red; /* Red indicates liked */
+}
+
+.control-btn.disliked {
+  color: gray; /* Gray indicates disliked */
+}
+
+/* Styling for song title text */
+.song-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Styling for artist name text */
+.artist-name {
+  font-size: 14px;
+  color: #666; /* Light gray color */
+}
+
+/* Music player controls */
+.controls {
+  display: flex;
+  justify-content: space-around; /* Spread buttons evenly */
+  margin: 10px 0;
+  gap: 5px; /* Spacing between buttons */
+}
+
+/* Icon font size for controls */
+.fa {
+  font-size: 30px;
+}
+
+/* General styling for control buttons */
+.control-btn {
+  background: #fda085; /* Orange background */
+  color: #fff; /* White text */
+  border: none;
+  padding: 8px 12px; /* Padding inside buttons */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background 0.3s; /* Smooth transition effect */
+}
+
+/* Hover effect for control buttons */
+.control-btn:hover {
+  background: #f6d365; /* Lighter orange on hover */
+}
+
+/* Progress bar and volume control layout */
+.progress-container,
+.volume-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Spacing between elements */
+  margin: 10px 0;
+}
+
+/* Progress bar and volume slider width */
+#progress-bar,
+#volume {
+  width: 100%;
+}
+
+/* Song list container styling */
+.song-list {
+  margin-top: 20px;
+  background: #fff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  width: 60%; /* 60% width of the container */
+  text-align: left;
+}
+
+/* Song list title styling */
+.song-list h3 {
+  text-align: center;
+  margin-bottom: 10px; /* Space below the title */
+}
+
+/* Search bar container styling */
+.search-container {
+  margin: 20px auto; /* Center and add vertical margin */
+  text-align: center;
+}
+
+/* Search form layout */
+#search-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Spacing between search bar and button */
+  width: 100%;
+}
+
+/* Styling for the search input field */
+#search-input {
+  padding: 8px;
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  width: 300px; /* Fixed width */
+  font-size: 20px;
+}
+
+/* Styling for the search button */
+#search-form button {
+  padding: 8px 12px; /* Padding inside the button */
+  border: none;
+  background-color: rgb(64, 64, 247); /* Orange background */
+  color: #fff; /* White text */
+  border-radius: 3px; /* Rounded corners */
+  cursor: pointer;
+}
+
+/* Responsive design adjustments for smaller screens */
+@media only screen and (max-width: 600px) {
+  .cover {
+    width: 30px; /* Smaller cover image */
+    height: 100%; 
+    border-radius: 0; /* Square corners */
+  }
+  .song-list {
+    width: 100%;
+  }
+  .control-btn {
+    padding: 5px 8px; /* Smaller buttons */
+  }
+  #volume {
+    width: 50%; /* Smaller volume slider */
+  }
+}
